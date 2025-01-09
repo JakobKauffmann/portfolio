@@ -52,7 +52,8 @@ footer {
 }
 
 .visualization-container img {
-    max-width: 100%;
+    max-width: 90%; /* Limits the image width to 90% of the container */
+    height: auto;   /* Maintains the aspect ratio */
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -62,4 +63,7 @@ footer {
 .visualization-container p {
     font-size: 14px;
     color: #555;
+    margin: 0 auto;
+    max-width: 800px; /* Optional: Limit the width of the description text for readability */
+    text-align: center; /* Ensures text is centered */
 }
