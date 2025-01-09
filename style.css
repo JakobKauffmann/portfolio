@@ -75,3 +75,63 @@ footer {
     margin: 20px auto;
     width: 90%;
 }
+
+/* General Project Section Styling */
+.project {
+    margin-bottom: 20px;
+}
+
+.project h3 {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.project h3 .details-link img {
+    width: 1em; /* Set size relative to text (same height as font size) */
+    height: 1em;
+    margin-left: 8px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.project h3 .details-link:hover img {
+    transform: scale(1.2); /* Slight zoom on hover */
+}
+
+.project p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.project-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.project-links a.github-link img {
+    width: 1em; /* Set size relative to text */
+    height: 1em;
+    vertical-align: middle;
+}
+
+.project-links a.report-link {
+    font-size: 14px;
+    text-decoration: none;
+    color: #007BFF;
+    transition: color 0.3s ease;
+}
+
+.project-links a.report-link:hover {
+    color: #0056b3;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+    margin: 20px 0;
+}
