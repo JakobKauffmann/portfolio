@@ -5,8 +5,21 @@ body, h1, h2, p, a {
     font-family: Arial, sans-serif;
 }
 
+h2 {
+    font-size: 2em; /* Secondary headers */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.5em; /* Tertiary headers */
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
 body {
     line-height: 1.6;
+    font-size: 16px;
     background-color: #f9f9f9;
     color: #333;
 }
@@ -61,7 +74,7 @@ footer {
 }
 
 .visualization-container p {
-    font-size: 14px;
+    font-size: 16px;
     color: #555;
     margin: 0 auto;
     max-width: 800px; /* Limit the width of the description text for readability */
@@ -86,22 +99,24 @@ footer {
     align-items: center;
     font-size: 18px;
     margin-bottom: 10px;
+    gap: 8px; /* Adds spacing between icons */
 }
 
-.project h3 .details-link img {
-    width: 1em; /* Set size relative to text (same height as font size) */
+.project h3 .details-link img,
+.project h3 .github-link img {
+    width: 1em; /* Icon size matches text size */
     height: 1em;
-    margin-left: 8px;
     vertical-align: middle;
     transition: transform 0.3s ease;
 }
 
-.project h3 .details-link:hover img {
+.project h3 .details-link:hover img,
+.project h3 .github-link:hover img {
     transform: scale(1.2); /* Slight zoom on hover */
 }
 
 .project p {
-    font-size: 14px;
+    font-size: 16px;
     color: #555;
     margin-bottom: 10px;
 }
@@ -112,14 +127,8 @@ footer {
     gap: 10px;
 }
 
-.project-links a.github-link img {
-    width: 1em; /* Set size relative to text */
-    height: 1em;
-    vertical-align: middle;
-}
-
 .project-links a.report-link {
-    font-size: 14px;
+    font-size: 16px;
     text-decoration: none;
     color: #007BFF;
     transition: color 0.3s ease;
@@ -134,4 +143,28 @@ hr {
     height: 1px;
     background-color: #ddd;
     margin: 20px 0;
+}
+/* Make the entire page use Flexbox */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensures the body takes the full height of the viewport */
+    display: flex;
+    flex-direction: column; /* Arrange elements vertically */
+}
+
+/* Ensure the main content grows and takes up remaining space */
+.container {
+    flex: 1; /* This allows the content to grow and push the footer down */
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    position: relative; /* Ensure it stays at the bottom of the content */
+    bottom: 0;
+    width: 100%; /* Make sure it spans the full width */
 }
