@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Distinguishing AI-Generated Text</title>
+</head>
+<body>
+<header>
+    <div class="container">
+        <h1>Distinguishing AI-Generated Text</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#details">Details</a>
+            <a href="#visualizations">Visualizations</a>
+        </nav>
+    </div>
+</header>
+
+<section id="details">
+    <div class="container">
+        <h2>Project Overview</h2>
+        <p>This project explores embedding techniques like SBERT, InferSent, and USE combined with machine learning models (MLP, CNN, AdaBoost) to classify text as human-written or chatbot-generated. The embedding data was processed using PCA for dimensionality reduction and converted into grayscale images for CNN training.</p>
+        <p>Download the full report: <a href="files/DistinguishingAI.pdf" target="_blank">PDF Report</a></p>
+        <p>View code on GitHub: <a href="https://github.com/JakobKauffmann/cs271-mlproject" target="_blank">GitHub Repository</a></p>
+    </div>
+</section>
+
+<section id="visualizations">
+    <div class="container">
+        <h2>Visualizations</h2>
+
+        <div class="visualization">
+            <img src="images/pca_variance.png" alt="PCA Variance Graph" style="max-width: 100%; margin-bottom: 10px;">
+            <p><strong>Figure 1:</strong> PCA variance analysis for dimensionality reduction of embeddings. This ensured computational efficiency while retaining 95–99% of variance.</p>
+        </div>
+
+        <div class="visualization">
+            <img src="images/v2g_resized.png" alt="Resized V2G Grayscale Images" style="max-width: 100%; margin-bottom: 10px;">
+            <p><strong>Figure 2:</strong> Grayscale images representing embeddings resized to 100×100 dimensions for CNN training. Examples are shown for human, GPT, and LLaMA-generated text.</p>
+        </div>
+
+        <div class="visualization">
+            <img src="images/learning_curves.png" alt="CNN Learning Curves" style="max-width: 100%; margin-bottom: 10px;">
+            <p><strong>Figure 3:</strong> Training and testing loss curves for CNN models, showing rapid convergence with minimal overfitting.</p>
+        </div>
+
+        <div class="visualization">
+            <img src="images/performance_heatmap.png" alt="Performance Heatmap" style="max-width: 100%; margin-bottom: 10px;">
+            <p><strong>Figure 4:</strong> Heatmap comparing the performance of Adaboost, CNN, and Simple MLP models across different embedding techniques for binary and multiclass classification tasks.</p>
+        </div>
+
+        <div class="visualization">
+            <img src="images/embedding_accuracy.png" alt="Embedding Accuracy Comparison" style="max-width: 100%; margin-bottom: 10px;">
+            <p><strong>Figure 5:</strong> Bar graph comparing classification accuracies across embeddings (SBERT, InferSent, USE). SBERT consistently outperforms other methods in capturing contextual nuances.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Jakob Kauffmann. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>
